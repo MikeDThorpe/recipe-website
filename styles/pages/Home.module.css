@@ -1,0 +1,19 @@
+.latest_recipes_container {
+  margin-bottom: 50px;
+}
+.
+@media (min-width: 768px) {
+  .latest_recipes_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+  }
+}
+@media (min-width: 1000px) {
+
+}
+@media (min-width: 1350px) {
+  .latest_recipes_container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}

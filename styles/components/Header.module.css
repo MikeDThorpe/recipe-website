@@ -1,0 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;0,500;1,600&display=swap");
+
+.header {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+  background-color: rgb(19, 56, 64);
+}
+.header_logo {
+  font-family: "Alegreya", sans-serif;
+  font-weight: 500;
+  color: rgb(231, 211, 183);
+  font-size: 2.5rem;
+  text-align: center;
+}

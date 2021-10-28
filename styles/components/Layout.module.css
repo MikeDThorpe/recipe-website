@@ -1,0 +1,19 @@
+.layout {
+  padding-top: 75px;
+  padding-left: 25px;
+  padding-right: 30px;
+  min-height: 100vh;
+  background-color: rgb(248, 249, 250);
+}
+@media (min-width: 1000px) {
+  .layout {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+}
+@media (min-width: 1200px) {
+    .layout {
+        padding-left: 300px;
+        padding-right: 300px;
+    }
+}
