@@ -1,13 +1,11 @@
 import LatestRecipes from "../components/homepage/LatestRecipes";
-import PopularCuisines from "../components/homepage/PopularCuisines";
-
-import styles from "../styles/pages/Home.module.css";
+import SearchRecipes from "../components/homepage/SearchRecipes";
 
 export default function HomePage({ categories, tags, cuisines, recipes }) {
   return (
     <>
-        <LatestRecipes recipes={recipes} />
-        <PopularCuisines />
+      <LatestRecipes recipes={recipes} />
+      <SearchRecipes tags={tags} recipes={recipes} />
     </>
   );
 }
