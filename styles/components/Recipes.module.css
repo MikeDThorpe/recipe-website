@@ -9,6 +9,9 @@
     margin-top: 15px;
     color: rgb(19, 56, 64);
 }
+.recipe_card h5::after {
+    content: "→"
+}
 .recipe_card h5:hover {
     text-decoration: underline;
 }

@@ -1,26 +1,17 @@
-import React, { useState } from "react";
-
 import RecipeCard from "../recipes/RecipeCard";
 
 const LatestRecipes = ({ recipes }) => {
-  const [recipesToShow, setRecipesToShow] = useState(3);
 
-  let revRecipes = recipes.reverse().slice(0, recipesToShow);
+  let revRecipes = recipes.reverse().slice(0, 6);
 
   return (
     <section className="container py-5">
       <h2 className="mb-4 text-center">Latest Recipes</h2>
-      <article className="recipe_thumbnail_grid">
+      <article className="pb-5 recipe_thumbnail_grid">
         {revRecipes.map((recipe) => (
           <RecipeCard recipe={recipe} />
         ))}
       </article>
-      <button
-        disabled={recipesToShow == recipes.length ? true : false}
-        onClick={() => setRecipesToShow(recipesToShow + 3)}
-      >
-        Show more
-      </button>
     </section>
   );
 };

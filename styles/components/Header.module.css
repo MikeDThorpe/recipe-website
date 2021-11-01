@@ -1,5 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;0,500;1,600&display=swap");
-
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 .header {
   padding-top: 20px;
   padding-bottom: 20px;
@@ -7,8 +6,8 @@
   background-color: rgb(19, 56, 64);
 }
 .header_logo {
-  font-family: "Alegreya", sans-serif;
-  font-weight: 500;
+  font-family: "Anton", sans-serif;
+  font-weight: 400;
   color: rgb(231, 211, 183);
   font-size: 2.5rem;
   text-align: center;

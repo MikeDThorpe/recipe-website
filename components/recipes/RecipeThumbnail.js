@@ -1,14 +1,14 @@
 import React from "react";
 import Image from "next/image";
 
-import NoImageThumbnail from "../../assets/images/misc/no-image-thumbnail.jpg";
-
 const RecipeThumbnail = ({ src }) => {
   if (!src) {
     return (
       <Image
-        src={NoImageThumbnail}
+        src="/images/no-image-thumbnail.jpg"
         alt="Image Unavailable."
+        width={500}
+        height={500}
       />
     );
   }
