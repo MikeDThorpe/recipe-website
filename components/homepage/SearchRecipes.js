@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import Link from "next/link";
 
 import RecipeGrid from "../recipes/RecipeGrid";
 
@@ -26,7 +27,7 @@ const SearchRecipes = ({ tags, recipes }) => {
     <section className="py-5 bg-yellow">
       <section className="container">
         <h2 className="text-center">Search Recipes</h2>
-        <div className="mx-auto col-lg-8 pt-3 d-flex justify-content-center flex-wrap">
+        <div className="mx-auto pt-3 d-flex justify-content-center flex-wrap">
           {tags.map((tag) => (
             <div
               onClick={() => setTagApplied(tag.title)}
@@ -41,9 +42,12 @@ const SearchRecipes = ({ tags, recipes }) => {
             </div>
           ))}
         </div>
-        <section className="pt-5 recipe_thumbnail_grid">
+        <section className="py-5 recipe_thumbnail_grid">
           <RecipeGrid recipes={recipesToShow} />
         </section>
+        <Link href={`/recipes/tags/${tagApplied.replace(/ /g, "-").toLowerCase()}`}>
+          <button>View all {tagApplied} Recipes</button>
+        </Link>
       </section>
     </section>
   );

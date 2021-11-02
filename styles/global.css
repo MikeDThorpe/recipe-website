@@ -3,15 +3,20 @@
 }
 
 button {
-  width: 100%;
-  height: 35px;
+  width: fit-content;
   display: block;
   margin: 0 auto;
-  font-size: 1rem;
+  padding: 10px 30px;
+  font-size: 1.2rem;
   background-color: rgba(19, 56, 64, 0.8);
   color: rgb(255, 255, 255);
   cursor: pointer;
   border: none;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
 }
 button:hover {
   background-color: rgba(19, 56, 64, 1);
@@ -20,9 +25,6 @@ button:disabled {
   background-color: rgba(19, 56, 64, 0.1);
 }
 @media (min-width: 100px) {
-  button {
-    width: 200px;
-  }
 }
 .bg-yellow {
   background-color: rgb(231, 211, 183);
