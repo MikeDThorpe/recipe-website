@@ -1,3 +1,20 @@
+.recipe_card {
+  cursor: pointer;
+}
+.recipe_card h3 {
+  margin-top: 15px;
+  margin-bottom: 15px
+}
+.recipe_card h5 {
+  margin-top: 15px;
+  color: rgb(19, 56, 64);
+}
+.recipe_card h5::after {
+    content: " →"
+}
+.recipe_card h5:hover {
+    text-decoration: underline;
+}
 .recipe_tag {
   display: inline-block;
   margin: 10px;
