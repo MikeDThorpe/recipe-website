@@ -1,11 +1,13 @@
 import LatestRecipes from "../components/homepage/LatestRecipes";
 import SearchRecipes from "../components/homepage/SearchRecipes";
+import CategoryBoxes from "../components/homepage/CategoryBoxes";
 
 export default function HomePage({ categories, tags, recipes }) {
   return (
     <>
       <LatestRecipes recipes={recipes} />
       <SearchRecipes tags={tags} recipes={recipes} />
+      <CategoryBoxes categories={categories} />
     </>
   );
 }
