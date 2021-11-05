@@ -1,5 +1,8 @@
+import React from "react";
+
 import LatestRecipes from "../components/homepage/LatestRecipes";
 import SearchRecipes from "../components/homepage/SearchRecipes";
+import FavouriteRecipes from "../components/homepage/FavouriteRecipes";
 import CategoryBoxes from "../components/homepage/CategoryBoxes";
 
 export default function HomePage({ categories, tags, recipes }) {
@@ -7,6 +10,7 @@ export default function HomePage({ categories, tags, recipes }) {
     <>
       <LatestRecipes recipes={recipes} />
       <SearchRecipes tags={tags} recipes={recipes} />
+      <FavouriteRecipes recipes={recipes} />
       <CategoryBoxes categories={categories} />
     </>
   );

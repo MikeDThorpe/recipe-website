@@ -1,4 +1,18 @@
-import react from "react";
+import React from "react";
+import RecipeBody from "../../components/recipes/RecipeBody";
+
+import RecipeHeader from "../../components/recipes/RecipeHeader";
+
+const RecipePage = ({ recipe }) => {
+  return (
+    <section className="container">
+      <RecipeHeader recipe={recipe} />
+      <RecipeBody recipe={recipe} />
+    </section>
+  );
+};
+
+export default RecipePage;
 
 export async function getStaticPaths() {
   const recipeRes = await fetch("http://localhost:1337/recipes");
@@ -26,13 +40,3 @@ export async function getStaticProps(context) {
     props: { recipe: recipeData },
   };
 }
-
-const RecipePage = ({ recipe }) => {
-  return (
-    <div>
-      <h2>{recipe.title}</h2>
-    </div>
-  );
-};
-
-export default RecipePage;
