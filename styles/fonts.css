@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&display=swap");
 p,
 a,
@@ -10,20 +11,20 @@ small {
   padding: 0;
   margin: 0;
   font-family: "Quicksand", sans-serif;
-  font-size: 1rem;
+  font-size: 1.2rem;
   line-height: 1.5;
 }
 a {
   cursor: pointer;
 }
 h2 {
-  font-family: "Quicksand", sans-serif;
-  font-size: 2rem;
+  font-family: "Anton", sans-serif;
+  font-size: 2.5rem;
   font-weight: 500;
 }
 h3 {
   font-family: "Quicksand", sans-serif;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   font-weight: 500;
 }
 h4 {
@@ -35,4 +36,16 @@ h5 {
   font-family: "Quicksand", sans-serif;
   font-weight: 500;
   font-size: 1.1rem;
+}
+.font-orange {
+  color: var(--orange);
+}
+.font-cyan {
+  color: var(--dark-cyan);
+}
+.logo {
+  font-family: "Anton", sans-serif;
+  font-weight: 400;
+  font-size: 2.8rem;
+  cursor: pointer;
 }

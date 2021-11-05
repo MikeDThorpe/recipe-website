@@ -26,7 +26,7 @@ const SearchRecipes = ({ tags, recipes }) => {
   return (
     <section className="py-5 bg-yellow">
       <section className="container">
-        <h2 className="text-center">Search Recipes</h2>
+        <h2 className="text-center font-cyan">Search Recipes</h2>
         <div className="mx-auto pt-3 d-flex justify-content-center flex-wrap">
           {tags.map((tag) => (
             <div
@@ -42,10 +42,10 @@ const SearchRecipes = ({ tags, recipes }) => {
             </div>
           ))}
         </div>
-        <section className="py-5 recipe_thumbnail_grid">
-          <RecipeGrid recipes={recipesToShow} />
-        </section>
-        <Link href={`/recipes/tags/${tagApplied.replace(/ /g, "-").toLowerCase()}`}>
+        <RecipeGrid recipes={recipesToShow} />
+        <Link
+          href={`/recipes/tags/${tagApplied.replace(/ /g, "-").toLowerCase()}`}
+        >
           <button>View all {tagApplied} Recipes</button>
         </Link>
       </section>
