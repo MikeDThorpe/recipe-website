@@ -85,7 +85,9 @@ footer {
 }
 .recipe_header_meta {
   padding: 10px;
-  background-color: rgb(236, 236, 236);
+  /* background-color: rgb(236, 236, 236); */
+  background-color: var(--light-orange);
+  color: var(--dark-cyan);
   border-radius: 5px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;

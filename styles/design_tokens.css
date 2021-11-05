@@ -1,4 +1,5 @@
 :root {
-    --dark-cyan: rgb(19,56,64);
+    --dark-cyan: rgb(19, 56, 64);
     --orange: rgb(231, 211, 183);
+    --light-orange: rgba(231, 211, 183,0.5);
 }
