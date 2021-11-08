@@ -24,7 +24,7 @@ const RecipeHeader = ({ recipe }) => {
             <Image src="/icons/tags-solid.svg" height={30} width={30} />
             <div className="d-flex my-2">
               {recipe.tags.map((tag) => (
-                <Link href={`/recipes/tags/${tag.title}`}>
+                <Link key={tag.id} href={`/recipes/tags/${tag.title}`}>
                   <h5 className="mx-1 my-0">{tag.title},</h5>
                 </Link>
               ))}

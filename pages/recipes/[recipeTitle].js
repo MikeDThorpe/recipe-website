@@ -1,13 +1,20 @@
 import React from "react";
-import RecipeBody from "../../components/recipes/RecipeBody";
+import Head from "next/head";
 
+import RecipeBody from "../../components/recipes/RecipeBody";
 import RecipeHeader from "../../components/recipes/RecipeHeader";
+import SuggestedRecipes from "../../components/recipes/SuggestedRecipes";
 
 const RecipePage = ({ recipe }) => {
   return (
     <section className="container">
+      <Head>
+        <title>{recipe.title} | Give it Beans</title>
+        <meta property="og:title" key="title" />
+      </Head>
       <RecipeHeader recipe={recipe} />
       <RecipeBody recipe={recipe} />
+      <SuggestedRecipes category={recipe.categories} />
     </section>
   );
 };

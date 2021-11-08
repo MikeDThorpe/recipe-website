@@ -27,7 +27,7 @@ const SearchRecipes = ({ tags, recipes }) => {
     <section className="py-5 bg-yellow">
       <section className="container">
         <h2 className="text-center font-cyan">Search Recipes</h2>
-        <div className="mx-auto pt-3 d-flex justify-content-center flex-wrap">
+        <div className="mx-auto pt-3 recipe_tag_container">
           {tags.map((tag) => (
             <div
               onClick={() => setTagApplied(tag.title)}

@@ -8,7 +8,7 @@ const FavouriteRecipes = ({ recipes }) => {
   favouriteRecipes.reverse().slice(0, 6);
 
   return (
-    <section className="container py-5">
+    <section className="container my-5 border-bottom">
       <h2 className="text-center font-cyan">Kitchen Favourites</h2>
       <RecipeGrid recipes={favouriteRecipes} />
     </section>
