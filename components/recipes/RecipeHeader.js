@@ -25,7 +25,7 @@ const RecipeHeader = ({ recipe }) => {
             <div className="d-flex my-2">
               {recipe.tags.map((tag) => (
                 <Link key={tag.id} href={`/recipes/tags/${tag.title}`}>
-                  <h5 className="mx-1 my-0">{tag.title},</h5>
+                  <h5 className="mx-1 my-0 link">{tag.title},</h5>
                 </Link>
               ))}
             </div>

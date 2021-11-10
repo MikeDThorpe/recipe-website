@@ -46,7 +46,7 @@ const SearchRecipes = ({ tags, recipes }) => {
         <Link
           href={`/recipes/tags/${tagApplied.replace(/ /g, "-").toLowerCase()}`}
         >
-          <button>View all {tagApplied} Recipes</button>
+          <button>All {tagApplied} Recipes</button>
         </Link>
       </section>
     </section>

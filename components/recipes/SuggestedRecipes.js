@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 
+import { useRecipes } from "../../context/Recipes.context";
 import RecipeGrid from "./RecipeGrid";
 
 const SuggestedRecipes = ({ category }) => {
   const [SuggestedRecipes, setSuggestedRecipes] = useState([]);
   const categoryTitle = category[0].title;
+  const recipes = useRecipes();
 
-  const fetchRecipesByTag = async () => {
-    const res = await fetch("http://localhost:1337/recipes");
-    const recipes = await res.json();
+  const filterRecipesByTag = async () => {
     const filteredRecipes = recipes.filter(
       (recipe) => recipe.categories[0].title == categoryTitle
     );
@@ -18,8 +18,8 @@ const SuggestedRecipes = ({ category }) => {
   };
 
   useEffect(() => {
-    fetchRecipesByTag();
-  }, []);
+    filterRecipesByTag();
+  }, [categoryTitle]);
 
   return (
     <section className="mt-5 pt-5 border-top">

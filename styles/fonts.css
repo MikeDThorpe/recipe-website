@@ -49,3 +49,9 @@ h5 {
   font-size: 2.8rem;
   cursor: pointer;
 }
+.link {
+  cursor: pointer;
+}
+.link:hover {
+  text-decoration: underline;
+}

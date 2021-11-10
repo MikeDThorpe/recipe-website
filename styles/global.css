@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap");
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -9,7 +11,8 @@ button {
   display: block;
   margin: 0 auto;
   padding: 15px 40px;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
+  font-family: "Quicksand", sans-serif;
   background-color: rgba(19, 56, 64, 1);
   color: rgb(255, 255, 255);
   cursor: pointer;
