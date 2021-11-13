@@ -6,12 +6,12 @@ import RecipeGrid from "./RecipeGrid";
 
 const SuggestedRecipes = ({ category }) => {
   const [SuggestedRecipes, setSuggestedRecipes] = useState([]);
-  const categoryTitle = category[0].title;
+  const categoryTitle = category.title;
   const recipes = useRecipes();
 
-  const filterRecipesByTag = async () => {
+  const filterRecipesByTag = () => {
     const filteredRecipes = recipes.filter(
-      (recipe) => recipe.categories[0].title == categoryTitle
+      (recipe) => recipe.category.title == categoryTitle
     );
     filteredRecipes.reverse().slice(0, 3);
     setSuggestedRecipes(filteredRecipes);
@@ -25,7 +25,7 @@ const SuggestedRecipes = ({ category }) => {
     <section className="mt-5 pt-5 border-top">
       <h2 className="font-cyan">More {categoryTitle} Recipes</h2>
       <RecipeGrid recipes={SuggestedRecipes} />
-      <Link href={`/recipes/${categoryTitle}`}>
+      <Link href={`/recipes/${categoryTitle.toLowerCase()}`}>
         <button>All {categoryTitle} Recipes</button>
       </Link>
     </section>

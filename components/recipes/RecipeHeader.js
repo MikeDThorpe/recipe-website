@@ -6,7 +6,7 @@ import RecipeThumbnail from "./RecipeThumbnail";
 import RecipeBreadcrumbs from "./RecipeBreadcrumb";
 
 const RecipeHeader = ({ recipe }) => {
-  let category = recipe.categories[0].title;
+  let category = recipe.category.title;
 
   return (
     <>

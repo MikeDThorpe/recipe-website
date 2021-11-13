@@ -1,7 +1,7 @@
 import React from "react";
 import Head from "next/head";
 
-import RecipeBody from "../../../components/recipes/RecipeBody"
+import RecipeBody from "../../../components/recipes/RecipeBody";
 import RecipeHeader from "../../../components/recipes/RecipeHeader";
 import SuggestedRecipes from "../../../components/recipes/SuggestedRecipes";
 
@@ -14,7 +14,7 @@ const RecipePage = ({ recipe }) => {
       </Head>
       <RecipeHeader recipe={recipe} />
       <RecipeBody recipe={recipe} />
-      <SuggestedRecipes category={recipe.categories} />
+      <SuggestedRecipes category={recipe.category} />
     </section>
   );
 };
@@ -28,7 +28,7 @@ export async function getStaticPaths() {
   const paths = recipeData.map((recipe) => {
     return {
       params: {
-        category: recipe.categories[0].slug,
+        category: recipe.category.slug,
         recipe: recipe.slug,
       },
     };

@@ -3,9 +3,17 @@ import Link from "next/link";
 
 import RecipeThumbnail from "./RecipeThumbnail";
 
-const RecipeCard = ({ recipe }) => {
+const RecipeCard = ({ recipe, category }) => {
+  let catSlug = "";
+
+  if (category) {
+    catSlug = category.toLowerCase();
+  } else {
+    catSlug = recipe.category.slug;
+  }
+
   return (
-    <Link href={`/recipes/${recipe.categories[0].slug}/${recipe.slug}`}>
+    <Link href={`/recipes/${catSlug}/${recipe.slug}`}>
       <div className="recipe_card mb-4">
         <RecipeThumbnail src={recipe.thumbnail} />
         <h3>{recipe.title}</h3>

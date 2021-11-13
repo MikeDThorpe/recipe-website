@@ -1,9 +1,15 @@
 import React from "react";
 
+import RecipeGrid from "../../../components/recipes/RecipeGrid";
+
 const CategoryPage = ({ category }) => {
+  console.log(category);
   return (
     <section className="container">
-          <h2 className="pt-5 text-align-center font-cyan">{category.title} Recipes</h2>
+      <h2 className="pt-5 text-center font-cyan">
+        {category.title} Recipes
+      </h2>
+      <RecipeGrid recipes={category.recipes} category={category.title} />
     </section>
   );
 };
