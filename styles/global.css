@@ -29,12 +29,6 @@ button:hover {
 button:disabled {
   background-color: rgba(19, 56, 64, 0.1);
 }
-@media (min-width: 100px) {
-}
 .bg-yellow {
   background-color: rgb(231, 211, 183);
 }
-/* colours */
-/* #133840 */
-/* #2B4B40 */
-/* #B48C59 */

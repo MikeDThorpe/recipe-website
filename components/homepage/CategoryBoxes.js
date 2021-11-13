@@ -1,22 +1,25 @@
 import React from "react";
+
 import Link from "next/link";
 import Image from "next/image";
 
-const CategoryBoxes = ({ categories }) => {
+const CategoryBoxes = () => {
+  const categories = ["Vegetarian", "Seafood", "Meat", "Vegan"]
+
+
   const findImagePath = (category) => {
-    console.log(category)
     let svg = "";
     switch (category) {
-      case "vegetarian":
+      case "Vegetarian":
         svg = "pepper-hot-solid.svg";
         break;
-      case "seafood":
+      case "Seafood":
         svg = "fish-solid.svg";
         break;
-      case "meat":
+      case "Meat":
         svg = "drumstick-solid.svg";
         break;
-      case "vegan":
+      case "Vegan":
         svg = "seedling-solid.svg";
         break;
     }
@@ -26,15 +29,15 @@ const CategoryBoxes = ({ categories }) => {
 
   return (
     <section className="container category_boxes_layout">
-      {categories.map((category) => (
-        <div key={category.id} className="category_box">
+      {categories.map((category, index) => (
+        <div key={index} className="category_box">
           <Image
-            src={findImagePath(category.title.toLowerCase())}
-            width={90}
-            height={90}
+            src={findImagePath(category)}
+            width={45}
+            height={45}
           />
-          <Link href={`/recipes/${category.title.toLowerCase()}`}>
-            <h3 className="mt-4">{category.title} Recipes </h3>
+          <Link href={`/recipes/${category.toLocaleLowerCase()}`}>
+            <h4 className="link">{category} Recipes </h4>
           </Link>
         </div>
       ))}

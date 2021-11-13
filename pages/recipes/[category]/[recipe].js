@@ -1,9 +1,9 @@
 import React from "react";
 import Head from "next/head";
 
-import RecipeBody from "../../components/recipes/RecipeBody";
-import RecipeHeader from "../../components/recipes/RecipeHeader";
-import SuggestedRecipes from "../../components/recipes/SuggestedRecipes";
+import RecipeBody from "../../../components/recipes/RecipeBody"
+import RecipeHeader from "../../../components/recipes/RecipeHeader";
+import SuggestedRecipes from "../../../components/recipes/SuggestedRecipes";
 
 const RecipePage = ({ recipe }) => {
   return (
@@ -22,12 +22,15 @@ const RecipePage = ({ recipe }) => {
 export default RecipePage;
 
 export async function getStaticPaths() {
-  const recipeRes = await fetch("http://localhost:1337/recipes");
-  const recipes = await recipeRes.json();
+  const res = await fetch(`${process.env.apiURL}recipes`);
+  const recipeData = await res.json();
 
-  const paths = recipes.map((recipe) => {
+  const paths = recipeData.map((recipe) => {
     return {
-      params: { recipeTitle: recipe.slug },
+      params: {
+        category: recipe.categories[0].slug,
+        recipe: recipe.slug,
+      },
     };
   });
 
@@ -38,10 +41,10 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps(context) {
-  const recipeRes = await fetch(
-    `http://localhost:1337/recipes/${context.params.recipeTitle}`
+  const res = await fetch(
+    `${process.env.apiURL}recipes/${context.params.recipe}`
   );
-  const recipeData = await recipeRes.json();
+  const recipeData = await res.json();
 
   return {
     props: { recipe: recipeData },

@@ -5,7 +5,7 @@ import RecipeThumbnail from "./RecipeThumbnail";
 
 const RecipeCard = ({ recipe }) => {
   return (
-    <Link href={`/recipes/${recipe.slug}`}>
+    <Link href={`/recipes/${recipe.categories[0].slug}/${recipe.slug}`}>
       <div className="recipe_card mb-4">
         <RecipeThumbnail src={recipe.thumbnail} />
         <h3>{recipe.title}</h3>

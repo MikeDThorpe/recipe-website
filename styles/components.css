@@ -3,6 +3,9 @@ header {
   padding-bottom: 20px;
   background-color: rgb(19, 56, 64);
 }
+header nav {
+  display: none;
+}
 footer {
   padding-top: 20px;
   padding-bottom: 20px;
@@ -17,6 +20,7 @@ footer {
 }
 .recipe_card h5 {
   margin-top: 15px;
+  font-weight: 600;
   color: rgb(19, 56, 64);
 }
 .recipe_card h5::after {
@@ -58,21 +62,18 @@ footer {
   background-color: var(--dark-cyan);
 }
 .category_boxes_layout {
+  padding: 0;
   display: grid;
-  gap: 50px;
+  gap: 25px;
 }
 .category_box {
-  height: 350px;
+  padding: 20px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   position: relative;
   z-index: 1;
   cursor: pointer;
-}
-.category_box {
-  height: 350px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   background: var(--light-orange);
   border-radius: 10px;
   -webkit-border-radius: 10px;
@@ -80,11 +81,11 @@ footer {
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
 }
-.category_box h3 {
+.category_box h4 {
   color: var(--dark-cyan);
   font-weight: 600;
 }
-.category_box h3::after {
+.category_box h4::after {
   content: " →";
 }
 .category_box_seafood {
@@ -119,6 +120,12 @@ footer {
   }
 }
 @media (min-width: 1000px) {
+  header nav {
+    display: block;
+  }
+  .hamburger {
+    display: none;
+  }
   .category_boxes_layout {
     grid-template-columns: 1fr 1fr;
   }
